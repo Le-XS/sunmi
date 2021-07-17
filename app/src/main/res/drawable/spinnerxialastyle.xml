@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    //item 插入图片(替换spinner默认箭头)
+    <item>
+        <bitmap
+            android:gravity="right"
+            android:src="@drawable/xiala"
+            />
+    </item>
+</layer-list>
