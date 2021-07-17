@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Demo1</string>
+    <color name="toptabcolor">#FF7D41</color>
+    <color name="toptabtextcolor">#39393C</color>
+</resources>
