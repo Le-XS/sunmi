@@ -30,45 +30,64 @@
         android:layout_marginEnd="32dp"
         android:orientation="horizontal">
 
-        <View
+        <EditText
             android:id="@+id/pswview1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:background="@drawable/input_psw_style" />
 
         <View
-            android:id="@+id/view1"
             android:layout_width="40dp"
             android:layout_height="match_parent" />
 
-        <View
+        <EditText
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:background="@drawable/input_psw_style" />
 
         <View
             android:layout_width="40dp"
             android:layout_height="match_parent" />
 
-        <View
+        <EditText
             android:id="@+id/view3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:background="@drawable/input_psw_style" />
 
         <View
             android:layout_width="40dp"
             android:layout_height="match_parent" />
 
-        <View
+        <EditText
             android:id="@+id/view4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:background="@drawable/input_psw_style" />
 
     </LinearLayout>
