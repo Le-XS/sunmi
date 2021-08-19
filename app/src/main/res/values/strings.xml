@@ -10,4 +10,6 @@
         <item>+1</item>
         <item>+86</item>
     </string-array>
+    <string name="new_order">新订单</string>
+    <string name="pre_order">预订单</string>
 </resources>

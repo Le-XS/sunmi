@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
         Spinner codeSpinner = findViewById(R.id.codeSpinner);
         loginbutton = findViewById(R.id.loginButton);
         inputPsw = findViewById(R.id.inputPsw);
-        /*pswview1 = findViewById(R.id.pswview1);
+        pswview1 = findViewById(R.id.pswview1);
         pswview2 = findViewById(R.id.view2);
         pswview3 = findViewById(R.id.view3);
         pswview4 = findViewById(R.id.view4);
         pswview5 = findViewById(R.id.view5);
-        pswview6 = findViewById(R.id.view6);*/
+        pswview6 = findViewById(R.id.view6);
         //切换登录方式点击事件
         loginModeSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +74,18 @@ public class MainActivity extends AppCompatActivity {
                     View layout = inflater.inflate(R.layout.login_bottom_swtich, null);
                     loginModeSwitch.setText(getString(R.string.login_mode_switch));
                     loginBottomLayout.removeAllViews();
-                    loginBottomLayout.addView(layout);
+                    loginBottomLayout.addView(layout);        pswview1 = findViewById(R.id.pswview1);
+                    pswview2 = findViewById(R.id.view2);
+                    pswview3 = findViewById(R.id.view3);
+                    pswview4 = findViewById(R.id.view4);
+                    pswview5 = findViewById(R.id.view5);
+                    pswview6 = findViewById(R.id.view6);
+                    pswview1.addTextChangedListener(textWatcher);
+                    pswview2.addTextChangedListener(textWatcher);
+                    pswview3.addTextChangedListener(textWatcher);
+                    pswview4.addTextChangedListener(textWatcher);
+                    pswview5.addTextChangedListener(textWatcher);
+                    pswview6.addTextChangedListener(textWatcher);
                 }
             }
         });
@@ -89,12 +100,12 @@ public class MainActivity extends AppCompatActivity {
         platformSpinner.setOnItemSelectedListener(new ProvOnItemSelectedListener());
         codeSpinner.setOnItemSelectedListener(new ProvOnItemSelectedListener());
         //密码输入框调用afterTextChanged
-        /*pswview1.addTextChangedListener(textWatcher);
+        pswview1.addTextChangedListener(textWatcher);
         pswview2.addTextChangedListener(textWatcher);
         pswview3.addTextChangedListener(textWatcher);
         pswview4.addTextChangedListener(textWatcher);
         pswview5.addTextChangedListener(textWatcher);
-        pswview6.addTextChangedListener(textWatcher);*/
+        pswview6.addTextChangedListener(textWatcher);
 
     }
     //onItemSelected监听器
@@ -153,46 +164,28 @@ public class MainActivity extends AppCompatActivity {
                         pswview3.clearFocus();
                         pswview4.requestFocus();
                     } else if(pswview4.isFocused()){
-                        if(inputPsw.getChildCount()==11){
-                            pswview4.clearFocus();
-                            pswview5.requestFocus();
-                        }else {
-                            loginbutton.setBackgroundColor(Color.parseColor("#FF7D41"));
-                            loginbutton.setTextColor(Color.parseColor("#FFFFFF"));
-                        }
+                        pswview4.clearFocus();
+                        pswview5.requestFocus();
                     } else if(pswview5.isFocused()){
                         pswview5.clearFocus();
                         pswview6.requestFocus();
-                    } else if(pswview6.isFocused()){
-                            loginbutton.setBackgroundColor(Color.parseColor("#FF7D41"));
-                            loginbutton.setTextColor(Color.parseColor("#FFFFFF"));
                     }
                 } else {
                     if(pswview6.isFocused()){
                         pswview6.clearFocus();
                         pswview5.requestFocus();
-                        loginbutton.setBackgroundColor(Color.parseColor("#E4E5E9"));
-                        loginbutton.setTextColor(Color.parseColor("#6B6A70"));
                     } else if(pswview5.isFocused()){
                         pswview5.clearFocus();
                         pswview4.requestFocus();
-                        loginbutton.setBackgroundColor(Color.parseColor("#E4E5E9"));
-                        loginbutton.setTextColor(Color.parseColor("#6B6A70"));
                     } else if(pswview4.isFocused()){
                         pswview4.clearFocus();
                         pswview3.requestFocus();
-                        loginbutton.setBackgroundColor(Color.parseColor("#E4E5E9"));
-                        loginbutton.setTextColor(Color.parseColor("#6B6A70"));
                     } else if(pswview3.isFocused()&&inputPsw.getChildCount()==11){
                         pswview3.clearFocus();
                         pswview2.requestFocus();
-                        loginbutton.setBackgroundColor(Color.parseColor("#E4E5E9"));
-                        loginbutton.setTextColor(Color.parseColor("#6B6A70"));
                     } else if(pswview2.isFocused()&&inputPsw.getChildCount()==11){
                         pswview2.clearFocus();
                         pswview1.requestFocus();
-                        loginbutton.setBackgroundColor(Color.parseColor("#E4E5E9"));
-                        loginbutton.setTextColor(Color.parseColor("#6B6A70"));
                     }
                 }
             }
