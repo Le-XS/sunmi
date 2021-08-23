@@ -139,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
+
     //监听字符变化（输入密码）
     TextWatcher textWatcher = new TextWatcher() {
         @Override
